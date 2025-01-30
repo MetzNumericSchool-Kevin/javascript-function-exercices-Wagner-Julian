@@ -13,6 +13,14 @@
         stock: 0,
         },
     ];
+    const cave = [
+        {
+            id: "potion_mana", 
+            prix: 20,
+            stock: 0,
+            },
+        ];
+
 
     // salutation Aventurier
 
@@ -21,4 +29,14 @@
     }
     console.log(salutation(nom_sorcier))
 
-    
+    // Quel est le tarif d'une potion ?
+
+    function tarif(identifiant,inv, quantite=1){
+        for (let objet of inv){
+            console.log(objet)
+            if (objet.id===identifiant){
+                return objet.prix*quantite
+            }
+        }
+    } 
+    console.log(tarif("potion_mana", cave,5))
