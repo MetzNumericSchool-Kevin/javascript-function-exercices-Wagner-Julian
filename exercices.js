@@ -60,5 +60,12 @@
         inv.push(potion)
     }
 
+    // Cherche moi les potions qui ...
 
-
+    function cherchePotion(inv, propriete, valeur){
+        for (let objet of inv){
+            if (objet[propriete]===valeur){
+                return objet
+            }
+        }
+    }
