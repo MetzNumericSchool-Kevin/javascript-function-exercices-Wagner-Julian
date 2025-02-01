@@ -40,3 +40,25 @@
         }
     } 
     console.log(tarif("potion_mana", cave,5))
+
+
+    // Fabrication de potion
+
+    function potion(identifiant, prix, stock){
+        return{
+            id: identifiant,
+            prix:prix,
+            stock:stock
+        }
+    }
+    let nouvellePotion = potion("potionVigueur", 40, 9999)
+    console.log(nouvellePotion)
+
+    // Ajout de nouvelles potions dans l'inventaire
+
+    function ajoutPotion(potion, inv){
+        inv.push(potion)
+    }
+
+
+
